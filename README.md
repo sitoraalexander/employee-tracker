@@ -1,6 +1,6 @@
 # Assignment 12: Employee Management System
 
-This is a Content Management Systems for business owners to be able to view and manage the departments, roles, and employees in their company, so that they can organize and plan their business efficiently. 
+This is a Content Management System for business owners to be able to view and manage the departments, roles, and employees in their company, so that they can organize and plan their business efficiently. 
 
 ### This application is built using node, inquirer, and MySQL. 
 ### It can perform following functionalities: 
