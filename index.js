@@ -9,11 +9,8 @@ let employees;
 
 var connection = mysql.createConnection({
     host: "localhost",
-
     // Your username
     user: "root",
-    
-  
     // Your password
     password: "P@ssw0rd",
     database: "hw12db"
@@ -47,7 +44,7 @@ var connection = mysql.createConnection({
         }
         else if (answer.choices === "VIEW") {
           viewLine();
-        } 
+        }
         else if (answer.choices === "UPDATE") {
           updateLine();
         }
@@ -58,7 +55,7 @@ var connection = mysql.createConnection({
           figlet('Thanks for using Columbia Bootcamp Employee Tracker', (err, result) => {
             console.log(err || result);
           });
-        
+
           connection.end();
         }
         else{
@@ -119,7 +116,7 @@ addLine = () => {
     else if (answer.add === "EMPLOYEE") {
       console.log("Add a new: " + answer.add);
       addEmployee();
-    } 
+    }
     else if (answer.add === "EXIT") {
       figlet('Thanks for using Columbia Bootcamp Employee Tracker', (err, result) => {
         console.log(err || result);
@@ -145,7 +142,7 @@ addDepartment = () => {
       console.log("1 new department added: " + answer.department);
       findDepartments();
       start();
-    }) 
+    })
   })
 };
 
@@ -164,7 +161,7 @@ addRole = () => {
     {
       name: "salary",
       type: "input",
-      message: "What is the salary for this possition?"
+      message: "What is the salary for this position?"
     },
     {
       name: "department_id",
@@ -184,7 +181,7 @@ addRole = () => {
       console.log("1 new role added: " + answer.title);
       findRoles();
       start();
-    }) 
+    })
   })
 };
 
@@ -253,7 +250,7 @@ addEmployee = () => {
       console.log("1 new employee added: " + answer.first_name + " " + answer.last_name);
       findEmployees();
       start()
-    }) 
+    })
   })
 };
 
@@ -317,7 +314,7 @@ viewEmployees = () => {
     figlet('Employees', (err, result) => {
       console.log(err || result);
     });
-  
+
     printTable(res);
     start();
   });
@@ -408,7 +405,7 @@ start();
     })
   })
 };
-  
+
 
 updateEmployeeManager = () => {
   let employeeOptions = [];
